@@ -1,0 +1,10 @@
+version: "2"
+services:
+  rtorrent_exporter:
+    image: b3vis/rtorrent_exporter
+    restart: always
+    container_name: rtorrent_exporter
+    environment:
+      - RTORRENTADDR="http://10.0.0.1/RPC2"
+    ports:
+      - "9135:9135"
